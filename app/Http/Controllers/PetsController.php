@@ -173,9 +173,11 @@ class PetsController extends Controller
         //dd((int)$request->user_id);
         //$pets = pet::find((int)$request->user_id);
         $pets = pet::where('user_id', $request->user_id)->get();
+        dd($pets);
+        //$pets = pet::find($pet[0]->id);
         //$pets = pet::search((int)$request->user_id)->orderBy('id', 'ASC')->paginate(10);
-        /*$pets->each(function($pets){
-            $pets->user;
+        /*$pet->each(function($pet){
+            $pets = pet::find($pet->id);
         });*/
 
         //dd($pets);
